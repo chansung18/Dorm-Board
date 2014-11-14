@@ -13,9 +13,27 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
+    var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
+    
+    func displayAlert(title:String, message:String) {
+        var alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+            alert.dismissViewControllerAnimated(true, completion: nil)
+        }))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50))
+        activityIndicator.layer.cornerRadius = 5
+        activityIndicator.layer.masksToBounds = true
+        activityIndicator.backgroundColor = UIColor.grayColor()
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.White
+        self.view.addSubview(activityIndicator)
         // Do any additional setup after loading the view.
     }
     
@@ -36,14 +54,35 @@ class SignupViewController: UIViewController {
         }
         
         if error != "" {
-            
+            displayAlert("Not Enough Info", message: error)
         } else {
+            var user = PFUser()
+            user.username = usernameField.text
+            user.password = passwordField.text
             
+            activityIndicator.startAnimating()
+            UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+            
+            user.signUpInBackgroundWithBlock(){ (succeeded, signUpError) -> Void in
+                
+                self.activityIndicator.stopAnimating()
+                UIApplication.sharedApplication().endIgnoringInteractionEvents()
+                
+                if succeeded == true {
+                    self.dismissViewControllerAnimated(true, completion: { () -> Void in
+                        
+                        println("asdfasdfasdfasdfasdf")
+                        isSignedUp = true
+                        defaultUsername = self.usernameField.text
+                        defaultPassword = self.passwordField.text
+                    })
+                } else {
+                    if let errorString = signUpError.userInfo?["error"] as? NSString {
+                        self.displayAlert("Sign Up Fail", message: errorString)
+                    }
+                }
+            }
         }
-    }
-    
-    func displayAlert(title:String, message:String) {
-        
     }
     
     /*
