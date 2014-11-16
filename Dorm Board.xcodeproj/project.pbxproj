@@ -27,7 +27,8 @@
 		1EA92EB41A15A8E40049D3E2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA92EB31A15A8E40049D3E2 /* SystemConfiguration.framework */; };
 		1EA92EB71A15A90E0049D3E2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA92EB51A15A90E0049D3E2 /* Bolts.framework */; };
 		1EA92EB81A15A90E0049D3E2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA92EB61A15A90E0049D3E2 /* Parse.framework */; };
-		1EA92EBF1A15DAAF0049D3E2 /* ListOfMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA92EBE1A15DAAF0049D3E2 /* ListOfMemoViewController.swift */; };
+		AF3F34431A1618DD00C65242 /* RoomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3F34421A1618DD00C65242 /* RoomListViewController.swift */; };
+		AF3F34451A161F1C00C65242 /* CreateRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3F34441A161F1C00C65242 /* CreateRoomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +67,8 @@
 		1EA92EB51A15A90E0049D3E2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		1EA92EB61A15A90E0049D3E2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		1EA92EB91A15A9260049D3E2 /* Dorm Board-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dorm Board-Bridging-Header.h"; sourceTree = "<group>"; };
-		1EA92EBE1A15DAAF0049D3E2 /* ListOfMemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfMemoViewController.swift; sourceTree = "<group>"; };
+		AF3F34421A1618DD00C65242 /* RoomListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomListViewController.swift; sourceTree = "<group>"; };
+		AF3F34441A161F1C00C65242 /* CreateRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRoomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +137,8 @@
 				1EA92E781A159F8A0049D3E2 /* AppDelegate.swift */,
 				1EA92E7D1A159F8A0049D3E2 /* ViewController.swift */,
 				1EA92E9B1A15A52C0049D3E2 /* SignupViewController.swift */,
-				1EA92EBE1A15DAAF0049D3E2 /* ListOfMemoViewController.swift */,
+				AF3F34421A1618DD00C65242 /* RoomListViewController.swift */,
+				AF3F34441A161F1C00C65242 /* CreateRoomViewController.swift */,
 				1EA92E7F1A159F8A0049D3E2 /* Main.storyboard */,
 				1EA92E821A159F8A0049D3E2 /* Images.xcassets */,
 				1EA92E841A159F8A0049D3E2 /* LaunchScreen.xib */,
@@ -272,10 +275,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EA92E7E1A159F8A0049D3E2 /* ViewController.swift in Sources */,
+				AF3F34451A161F1C00C65242 /* CreateRoomViewController.swift in Sources */,
 				1EA92E7C1A159F8A0049D3E2 /* Dorm_Board.xcdatamodeld in Sources */,
+				AF3F34431A1618DD00C65242 /* RoomListViewController.swift in Sources */,
 				1EA92E9C1A15A52C0049D3E2 /* SignupViewController.swift in Sources */,
 				1EA92E791A159F8A0049D3E2 /* AppDelegate.swift in Sources */,
-				1EA92EBF1A15DAAF0049D3E2 /* ListOfMemoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +488,7 @@
 				1EA92E971A159F8A0049D3E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1EA92E981A159F8A0049D3E2 /* Build configuration list for PBXNativeTarget "Dorm BoardTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +497,7 @@
 				1EA92E9A1A159F8A0049D3E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

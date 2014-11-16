@@ -49,7 +49,7 @@ class ViewController: UIViewController {
             UIApplication.sharedApplication().endIgnoringInteractionEvents()
             
             if error == nil {
-                self.performSegueWithIdentifier("login complete", sender: self)
+                self.performSegueWithIdentifier("login complete", sender:self)
             } else {
                 let errorMessage = error.userInfo?["error"] as? NSString
                 var alert = UIAlertController(title: "Login Failed!", message: errorMessage, preferredStyle: UIAlertControllerStyle.Alert)

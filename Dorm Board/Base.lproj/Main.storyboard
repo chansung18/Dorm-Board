@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -103,49 +103,12 @@
                     <connections>
                         <outlet property="passwordField" destination="KbI-Eo-k5g" id="rEf-Ti-yj9"/>
                         <outlet property="usernameField" destination="lgo-jM-gEY" id="dCd-o5-UFd"/>
-                        <segue destination="WbP-sI-ZQC" kind="show" identifier="login complete" id="KKE-wD-1AQ"/>
+                        <segue destination="GgS-WA-dTt" kind="show" identifier="login complete" id="FB1-9q-cGD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="400" y="327"/>
-        </scene>
-        <!--Memo List-->
-        <scene sceneID="ty1-Ae-tZQ">
-            <objects>
-                <viewController id="EsG-fa-N1x" customClass="ListOfMemoViewController" customModule="Dorm_Board" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="R9j-2k-gdn"/>
-                        <viewControllerLayoutGuide type="bottom" id="wiL-2f-bzQ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="UfV-Zf-uak">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DIN-3b-tWJ">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="EsG-fa-N1x" id="WUr-n7-Lrj"/>
-                                    <outlet property="delegate" destination="EsG-fa-N1x" id="o5a-fp-n9g"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="DIN-3b-tWJ" secondAttribute="trailing" constant="-16" id="MAt-NF-NvZ"/>
-                            <constraint firstItem="DIN-3b-tWJ" firstAttribute="leading" secondItem="UfV-Zf-uak" secondAttribute="leadingMargin" constant="-16" id="WvY-hk-7NU"/>
-                            <constraint firstItem="DIN-3b-tWJ" firstAttribute="top" secondItem="R9j-2k-gdn" secondAttribute="bottom" constant="-44" id="ej2-zO-qe1"/>
-                            <constraint firstItem="wiL-2f-bzQ" firstAttribute="top" secondItem="DIN-3b-tWJ" secondAttribute="bottom" id="pNx-5X-x4h"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Memo List" id="Xxf-Vk-XOQ"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3L3-n9-cG0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1457" y="327"/>
+            <point key="canvasLocation" x="46" y="317"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="EC0-wH-8d0">
@@ -244,25 +207,164 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="400" y="1053"/>
+            <point key="canvasLocation" x="46" y="1043"/>
+        </scene>
+        <!--Room List-->
+        <scene sceneID="NKO-1l-mzo">
+            <objects>
+                <viewController id="BXu-A5-YPC" customClass="RoomListViewController" customModule="Dorm_Board" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eVU-xs-8ox"/>
+                        <viewControllerLayoutGuide type="bottom" id="GN4-FF-ND7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KRK-Wo-l0I">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9Fv-Pt-Q4P">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Room Cell" id="2aU-lr-mXJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2aU-lr-mXJ" id="atE-EU-vKG">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BXu-A5-YPC" id="gzq-XC-1Sr"/>
+                                    <outlet property="delegate" destination="BXu-A5-YPC" id="9IW-YA-GTN"/>
+                                </connections>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S1L-zF-jky">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Lk7-Nr-Ndy"/>
+                                    <barButtonItem systemItem="compose" id="Rsx-eO-brp">
+                                        <connections>
+                                            <segue destination="NKw-2t-KiB" kind="presentation" id="Mz4-U8-Jxt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S1L-zF-jky" firstAttribute="top" secondItem="9Fv-Pt-Q4P" secondAttribute="bottom" id="Bgp-CD-8AA"/>
+                            <constraint firstAttribute="trailing" secondItem="9Fv-Pt-Q4P" secondAttribute="trailing" id="Je3-Ld-9nv"/>
+                            <constraint firstItem="S1L-zF-jky" firstAttribute="leading" secondItem="KRK-Wo-l0I" secondAttribute="leading" id="Q41-HJ-bCs"/>
+                            <constraint firstAttribute="bottom" secondItem="S1L-zF-jky" secondAttribute="bottom" id="aT2-Nv-o2K"/>
+                            <constraint firstItem="9Fv-Pt-Q4P" firstAttribute="top" secondItem="KRK-Wo-l0I" secondAttribute="top" id="axB-tC-tDA"/>
+                            <constraint firstItem="9Fv-Pt-Q4P" firstAttribute="leading" secondItem="KRK-Wo-l0I" secondAttribute="leading" id="mR8-LW-opE"/>
+                            <constraint firstAttribute="trailing" secondItem="S1L-zF-jky" secondAttribute="trailing" id="qdc-WM-sqf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Room List" id="IeM-Ow-zJ7"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="roomTableView" destination="9Fv-Pt-Q4P" id="BYf-yN-po0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dkf-jd-cW0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1110" y="317"/>
+        </scene>
+        <!--Create Room View Controller-->
+        <scene sceneID="UrS-qx-Atl">
+            <objects>
+                <viewController id="NKw-2t-KiB" customClass="CreateRoomViewController" customModule="Dorm_Board" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f4c-yR-TEL"/>
+                        <viewControllerLayoutGuide type="bottom" id="Oz5-re-bc6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fZQ-Oj-PeL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Room Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CK0-nS-g9f">
+                                <rect key="frame" x="16" y="163" width="288" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4Et-Dh-jim"/>
+                                    <constraint firstAttribute="width" constant="288" id="CfS-ji-EgH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="NKw-2t-KiB" id="Z9r-lF-eLh"/>
+                                </connections>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wv7-MM-gJL">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4Op-jC-gbI"/>
+                                    <barButtonItem systemItem="add" id="DuT-jp-GLd">
+                                        <connections>
+                                            <action selector="addPressed:" destination="NKw-2t-KiB" id="lEw-kS-IA0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a New Room Now!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEU-JV-GqR">
+                                <rect key="frame" x="16" y="62" width="288" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="mc1-tX-6qa"/>
+                                    <constraint firstAttribute="height" constant="63" id="ovA-Nh-9k9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="gEU-JV-GqR" firstAttribute="top" secondItem="f4c-yR-TEL" secondAttribute="bottom" constant="42" id="3vr-lI-Arg"/>
+                            <constraint firstItem="wv7-MM-gJL" firstAttribute="leading" secondItem="fZQ-Oj-PeL" secondAttribute="leading" id="3zT-VI-NTq"/>
+                            <constraint firstAttribute="centerX" secondItem="gEU-JV-GqR" secondAttribute="centerX" id="9fE-Qq-6Fd"/>
+                            <constraint firstItem="CK0-nS-g9f" firstAttribute="top" secondItem="gEU-JV-GqR" secondAttribute="bottom" constant="38" id="PVt-zz-q2R"/>
+                            <constraint firstAttribute="bottom" secondItem="wv7-MM-gJL" secondAttribute="bottom" id="f6q-Se-P33"/>
+                            <constraint firstAttribute="trailing" secondItem="wv7-MM-gJL" secondAttribute="trailing" id="pwH-dS-8PW"/>
+                            <constraint firstAttribute="centerX" secondItem="CK0-nS-g9f" secondAttribute="centerX" id="sEI-Gl-3Hy"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="1Od-DB-NcW" appends="YES" id="X01-D4-WV1"/>
+                        </connections>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="roomNameField" destination="CK0-nS-g9f" id="uvM-op-0KX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eXj-be-ANI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="1Od-DB-NcW">
+                    <connections>
+                        <action selector="swiped:" destination="NKw-2t-KiB" id="sFh-u2-C0d"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1110" y="1043"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="2XT-SF-ipy">
+        <scene sceneID="miR-0r-Tum">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WbP-sI-ZQC" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GgS-WA-dTt" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lxr-gj-5Xy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VAs-B9-1Se">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="EsG-fa-N1x" kind="relationship" relationship="rootViewController" id="vdO-Ah-5CP"/>
+                        <segue destination="BXu-A5-YPC" kind="relationship" relationship="rootViewController" id="7cY-ew-0KM"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qit-Bt-BcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g0U-vC-sx8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="925" y="327"/>
+            <point key="canvasLocation" x="578" y="317"/>
         </scene>
     </scenes>
 </document>
